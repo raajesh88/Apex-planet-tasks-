@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Project Implementation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <h1>My Portfolio</h1>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+
+        <p>
+            I am a web development learner skilled in HTML,
+            CSS, and JavaScript.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+
+        <h2>Projects</h2>
+
+        <div class="project-box">
+            <h3>To-Do App</h3>
+            <p>Task management app using Local Storage.</p>
+        </div>
+
+        <div class="project-box">
+            <h3>Product Listing</h3>
+            <p>Filtering and sorting products dynamically.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+
+        <h2>Contact</h2>
+
+        <input type="text" placeholder="Enter Name">
+
+        <input type="email" placeholder="Enter Email">
+
+        <textarea placeholder="Enter Message"></textarea>
+
+        <button>Send</button>
+    </section>
+
+    <!-- To-Do App -->
+    <section class="section">
+
+        <h2>To-Do List with Local Storage</h2>
+
+        <input type="text" id="taskInput" placeholder="Enter Task">
+
+        <button onclick="addTask()">Add Task</button>
+
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- Product Listing -->
+    <section class="section">
+
+        <h2>Product Listing</h2>
+
+        <!-- Filter -->
+        <select id="filterCategory" onchange="filterProducts()">
+
+            <option value="all">All Categories</option>
+
+            <option value="electronics">Electronics</option>
+
+            <option value="fashion">Fashion</option>
+        </select>
+
+        <!-- Sort -->
+        <select id="sortOption" onchange="sortProducts()">
+
+            <option value="default">Sort By</option>
+
+            <option value="low-high">Price Low to High</option>
+
+            <option value="high-low">Price High to Low</option>
+        </select>
+
+        <div id="productContainer" class="product-container"></div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
